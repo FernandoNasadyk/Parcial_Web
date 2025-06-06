@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBottle - Hidratate con estilo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1>EcoBottle</h1>
+            <ul>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#precio">Precio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Botella ecológica con filtro natural</h2>
+            <p>Tu salud y el planeta lo agradecerán.</p>
+            <img src="img/eco-bottle.png" alt="EcoBottle" class="responsive-img">
+        </section>
+
+        <section id="beneficios">
+            <h3>¿Por qué elegir EcoBottle?</h3>
+            <ul>
+                <li>Filtro natural de carbón</li>
+                <li>Reutilizable y reciclable</li>
+                <li>Diseño moderno</li>
+            </ul>
+        </section>
+
+        <section id="precio">
+            <h3>Simulador de descuento</h3>
+            <p>Precio original: $<span id="precio-original">4000</span></p>
+            <label for="descuento">Ingresá tu cupón (%):</label>
+            <input type="number" id="descuento" placeholder="Ej: 10">
+            <button onclick="calcularDescuento()">Aplicar</button>
+            <p id="precio-final"></p>
+        </section>
+
+        <section id="contacto">
+            <h3>Contacto</h3>
+            <form id="formulario" action="formulario.php" method="POST" onsubmit="return validarFormulario()">
+                <label>Nombre: <input type="text" name="nombre" id="nombre" required></label>
+                <label>Email: <input type="email" name="email" id="email" required></label>
+                <label>Asunto: <input type="text" name="asunto" id="asunto" required></label>
+                <label>Mensaje: <textarea name="mensaje" id="mensaje" required></textarea></label>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="respuesta"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EcoBottle - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
